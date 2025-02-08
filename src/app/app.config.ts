@@ -9,6 +9,7 @@ import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
 import env from '../environments/env.json';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers:
@@ -29,6 +30,6 @@ export const appConfig: ApplicationConfig = {
       provideAuth(() => getAuth()),
       provideFirestore(() => getFirestore()),
       provideMessaging(() => getMessaging()),
-      provideStorage(() => getStorage())
+      provideStorage(() => getStorage()), provideAnimationsAsync()
     ]
 };
