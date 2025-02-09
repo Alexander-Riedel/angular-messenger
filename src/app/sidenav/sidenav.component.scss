@@ -1,0 +1,10 @@
+.sidenav-container {
+    height: calc(100% - 64px);
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+mat-expansion-panel {
+    border-style: none;
+}

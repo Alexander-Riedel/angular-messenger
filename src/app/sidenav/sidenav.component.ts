@@ -1,26 +1,19 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-
-import { MatDrawer } from '@angular/material/sidenav';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-sidenav',
-  imports: [
-    MatButtonModule,
-    MatSidenavModule
-  ],
+  imports: [MatExpansionModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
 export class SidenavComponent {
+  readonly panelOpenState = signal(false);
 
-  showFiller = false;
-
-  @ViewChild('drawer') drawer!: MatDrawer;
-
-  toggleSidenav() {
-    this.drawer.toggle();
-  }
+  panelOpenStates = {
+    channels: signal(true),
+    directMessages: signal(true)
+  };
 
 }

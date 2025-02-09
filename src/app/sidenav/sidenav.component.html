@@ -1,11 +1,30 @@
-<mat-drawer #drawer class="sidenav" mode="side">
+<div class="sidenav-container">
 
-    <p>Auto-resizing sidenav</p>
-    @if (showFiller) {
-    <p>Lorem, ipsum dolor sit amet consectetur.</p>
-    }
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-    </button>
-    
-</mat-drawer>
+    <mat-accordion multi="true">
+
+        <h2>Devspace</h2>
+
+        <mat-expansion-panel [expanded]="panelOpenStates.channels()" (opened)="panelOpenState.set(true)"
+            (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Channels </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+                <div>Channel-Namen</div>
+                <div>Neuen Channel hinzufügen</div>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="panelOpenStates.directMessages()" (opened)="panelOpenState.set(true)"
+            (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Direktnachrichten </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+                User-Namen
+            </div>
+        </mat-expansion-panel>
+
+    </mat-accordion>
+
+</div>
