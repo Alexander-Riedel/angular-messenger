@@ -1,6 +1,30 @@
 <div class="login-container">
-    <h1>Willkommen!</h1>
-    <button mat-raised-button color="primary" (click)="login()">
-      Mit Google anmelden
-    </button>
+
+  <div class="top-left">LOGO</div>
+  <div class="top-right">
+    <div>Neu bei DABubble?</div>
+    <a href="" class="button-link">Konto erstellen</a>
   </div>
+
+  <div class="login-card">
+    <div class="login-card-content">
+      <h1>Anmeldung</h1>
+      <div>Wir empfehlen dir, die Email-Addresse zu nutzen, die du bei der Arbeit verwendest.</div>
+      <input type="email">
+      <input type="password">
+      <a href="">Password vergessen?</a>
+      <div>ODER</div>
+      <button (click)="login()">Anmelden mit Google</button>
+      <div>
+        <button>Anmelden</button>
+        <button>Gäste-Login</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-center">
+    <a href="" class="button-link">Impressum</a>
+    <a href="" class="button-link">Datenschutz</a>
+  </div>
+
+</div>
