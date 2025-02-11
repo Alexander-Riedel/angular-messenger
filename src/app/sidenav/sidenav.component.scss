@@ -6,5 +6,12 @@
 }
 
 mat-expansion-panel {
-    border-style: none;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+mat-expansion-panel-header {
+    &:hover {
+        background-color: unset !important;
+    }
 }
