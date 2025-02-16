@@ -1,14 +1,21 @@
 <div class="messenger-container">
+
     <app-header></app-header>
-    <div class="messenger-content">
-        <div class="sidenav-area">
+
+    <mat-grid-list cols="8" rowHeight="200px" class="messenger-content">
+
+        <mat-grid-tile [colspan]="2" class="sidenav-area">
             <app-sidenav></app-sidenav>
-        </div>
-        <div class="main-area">
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="4" class="main-area">
             <app-main></app-main>
-        </div>
-        <div class="thread-area">
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" class="thread-area">
             <app-thread></app-thread>
-        </div>
-    </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
 </div>
